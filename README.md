@@ -27,7 +27,9 @@ Each release holds one zip file, a *bundle*, and nothing else lives here but thi
 
 ## Contributing images or music
 
-You don't need access to this repository. Everything goes through a pull request to the game repo:
+**Contributions go through the game repo's `incoming/` folder, not this repository.** This repository's `incoming/`
+folder is not processed: nothing watches it, so files put there never reach the game. Please don't open pull requests
+here. You don't need access to this repository; everything goes through a pull request to the game repo:
 
 1. In your fork or clone of
    [marvel-champions-digital-game](https://github.com/quincarter/marvel-champions-digital-game), run `pnpm install` and
@@ -42,7 +44,7 @@ You don't need access to this repository. Everything goes through a pull request
    Leave `incoming/.gitkeep` in place.
 3. Run `pnpm assets:fetch` again to see your files in the game (`pnpm dev`). `node scripts/assets-incoming.mjs` shows
    which bundle each file joins.
-4. Commit the files in `incoming/` and open a pull request. The "Incoming media" check confirms every file has a
+4. Commit the files in `incoming/` and open a pull request. CI's "Lint and format" job confirms every file has a
    bundle to go to.
 5. After the merge, a workflow in the game repo uploads the updated bundles here as new releases and opens a pull
    request that updates the manifest and empties `incoming/`.
