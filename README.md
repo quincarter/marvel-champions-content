@@ -27,8 +27,7 @@ Each release holds one zip file, a *bundle*, and nothing else lives here but thi
 
 ## Contributing images or music
 
-**Contributions go through the game repo's `incoming/` folder, not this repository.** This repository's `incoming/`
-folder is not processed: nothing watches it, so files put there never reach the game. Please don't open pull requests
+**Contributions go through the game repo's `incoming/` folder, not this repository.** Please don't open pull requests
 here. You don't need access to this repository; everything goes through a pull request to the game repo:
 
 1. In your fork or clone of
